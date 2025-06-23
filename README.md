@@ -40,7 +40,7 @@ Feel free to suggest ideas, start discussions, or help cross things off this lis
 
 Whether you want to build, fix, design, or just hang out — welcome aboard.
 
-- 🗣 [GitHub Discussions]([https://github.com/your-org-or-name/flet/](https://github.com/FletCommunity/FletCommunity/)discussions)
+- 🗣 [GitHub Discussions](https://github.com/FletCommunity/FletCommunity/discussions)
 - 🧠 Suggest features or changes via Issues
 - ⚙️ Submit pull requests anytime
 - 🧭 Vote on direction & participate in planning

@@ -1,120 +1,69 @@
-# Flet
+# Flet — Community Edition
 
-<img src="media/logo/flet-logo.svg" width="50%"/>
+> ✊ A community-first fork of [flet-dev/flet](https://github.com/flet-dev/flet)  
+> Built by developers. Guided by developers. Shaped by the community.
 
-[![Build status](https://ci.appveyor.com/api/projects/status/xwablctxslvey576/branch/main?svg=true)](https://ci.appveyor.com/project/flet-dev/flet/branch/main)
+---
 
-Flet is a framework that enables you to easily build real-time web, mobile, and desktop apps in your favorite language and securely share them with your team. No frontend experience is required.
+## 🎯 What is Flet CE?
 
-### ⚡From idea to app in minutes
+**Flet Community Edition (Flet CE)** is a reimagined version of the original Flet framework — created to hand over control to the developer community.
 
-An internal tool or a dashboard for your team, weekend project, data entry form, kiosk app, or high-fidelity prototype - Flet is an ideal framework to quickly hack great-looking interactive apps to serve a group of users.
+This project is not just a fork. It’s a **new foundation**.
 
-### 📐 Simple architecture
+We believe in:
 
-No more complex architecture with JavaScript frontend, REST API backend, database, cache, etc. With Flet you just write a monolith stateful app in Python only and get multi-user, real-time Single-Page Application (SPA).
+- 💬 Open collaboration  
+- 🛠 Transparent decision-making  
+- 🌱 Iterative, community-driven development  
 
-### 🔋Batteries included
+If you’ve ever wanted a say in your tools — this is your place.
 
-To start developing with Flet, you just need your favorite IDE or text editor. No SDKs, no thousands of dependencies, no complex tooling - Flet has a built-in web server with assets hosting and desktop clients.
+---
 
-### &nbsp;<img src="media/flutter/icon_flutter.svg" height="20px" />&nbsp;&nbsp;Powered by Flutter
+## 🧭 Roadmap / TODO
 
-Flet UI is built with [Flutter](https://flutter.dev/), so your app looks professional and could be delivered to any platform. Flet simplifies the Flutter model by combining smaller "widgets" to ready-to-use "controls" with an imperative programming model.
+We’re starting lean — and growing together.
 
-### 🌐 Speaks your language
+Here’s what’s on the immediate horizon:
 
-Flet is language-agnostic, so anyone on your team could develop Flet apps in their favorite language. [Python](https://flet.dev/docs/guides/python/getting-started) is already supported, Go, C# and others are [coming next](https://flet.dev/roadmap).
+- [ ] ✨ Define and publish technical direction
+- [ ] 🧰 Refactor project structure
+- [ ] 🧪 Set up basic testing & CI for the fork
+- [ ] 📦 Clean up unused modules / legacy logic
+- [ ] 🧱 Lay groundwork for modular extensions
+- [ ] 🧾 Write minimal docs for contributors
+- [ ] 🤝 Open voting on key features / ideas
+- [ ] 🌐 Create public roadmap board
+- [ ] 💬 Build initial contributor team
 
-### 📱 Deliver to any device
+Feel free to suggest ideas, start discussions, or help cross things off this list.
 
-Deploy Flet app as a web app and view it in a browser. Package it as a standalone desktop app for Windows, macOS, and Linux. Install it on mobile as [PWA](https://web.dev/what-are-pwas/) or view via Flet app for iOS and Android.
+---
 
-## Flet app example
+## 🤝 Get Involved
 
-At the moment you can write Flet apps in Python and other languages will be added soon.
+Whether you want to build, fix, design, or just hang out — welcome aboard.
 
-Here is a sample "Counter" app:
+- 🗣 [GitHub Discussions](https://github.com/your-org-or-name/flet/discussions)
+- 🧠 Suggest features or changes via Issues
+- ⚙️ Submit pull requests anytime
+- 🧭 Vote on direction & participate in planning
 
-```python title="counter.py"
-import flet as ft
+---
 
-def main(page: ft.Page):
-    page.title = "Flet counter example"
-    page.vertical_alignment = ft.MainAxisAlignment.CENTER
+## 🙏 Credits
 
-    txt_number = ft.TextField(value="0", text_align=ft.TextAlign.RIGHT, width=100)
+This is a fork of [flet-dev/flet](https://github.com/flet-dev/flet).  
+All credit to the original authors and maintainers.
 
-    def minus_click(e):
-        txt_number.value = str(int(txt_number.value) - 1)
-        page.update()
+We stand on your shoulders — and take it from here.
 
-    def plus_click(e):
-        txt_number.value = str(int(txt_number.value) + 1)
-        page.update()
+---
 
-    page.add(
-        ft.Row(
-            [
-                ft.IconButton(ft.Icons.REMOVE, on_click=minus_click),
-                txt_number,
-                ft.IconButton(ft.Icons.ADD, on_click=plus_click),
-            ],
-            alignment=ft.alignment.center,
-        )
-    )
+## 📥 Contact
 
-ft.app(main)
-```
+Have questions or ideas?
 
-To run the app install `flet` module:
-
-```bash
-pip install flet
-```
-
-and run the program:
-
-```bash
-python counter.py
-```
-
-The app will be started in a native OS window - what a nice alternative to Electron!
-
-<img src="https://flet.dev/img/docs/getting-started/flet-counter-macos.png" width="45%" />
-
-
-Now, if you want to run the app as a web app, just replace the last line with:
-
-```python
-flet.app(target=main, view=flet.AppView.WEB_BROWSER)
-```
-
-run again and now you instantly get a web app:
-
-<img src="https://flet.dev/img/docs/getting-started/flet-counter-safari.png" width="60%" />
-
-## Getting started
-
-* [Creating Flet apps in Python](https://flet.dev/docs/guides/python/getting-started)
-* [Controls reference](https://flet.dev/docs/controls)
-
-## Sample apps in Python
-
-* [Greeter](https://github.com/flet-dev/examples/blob/main/python/apps/greeter/greeter.py) ([Online Demo](https://gallery.flet.dev/greeter/))
-* [Counter](https://github.com/flet-dev/examples/blob/main/python/apps/counter/counter.py) ([Online Demo](https://gallery.flet.dev/counter/))
-* [To-Do](https://github.com/flet-dev/examples/blob/main/python/apps/todo/todo.py) ([Online Demo](https://gallery.flet.dev/todo/))
-* [Icons Browser](https://github.com/flet-dev/examples/blob/main/python/apps/icons-browser/main.py) ([Online Demo](https://gallery.flet.dev/icons-browser/))
-
-More demo applications can be found in the [gallery](https://flet.dev/gallery/).
-
-## Community
-
-* [Discussions](https://github.com/flet-dev/flet/discussions)
-* [Discord](https://discord.gg/dzWXP8SHG8)
-* [Twitter](https://twitter.com/fletdev)
-* [Email](mailto:hello@flet.dev)
-
-## Contribute to this wonderful project
-
-* Read the <a href="https://github.com/flet-dev/flet/blob/main/CONTRIBUTING.md">CONTRIBUTING.md</a> file
+- 📨 Email: hello@flet.dev  
+- 💬 Discord: [Join the chat](https://discord.gg/dzWXP8SHG8)
